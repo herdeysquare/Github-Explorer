@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Visualizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="title"><h1>Github Sorting Visualizer</h1></div>
+      <div class="paragraph">
+        <p>
+          Type in a random Github user profile to view their details and
+          repositories.
+        </p>
+      </div>
+      <form onsubmit="generateUser(event)" class="user-info">
+        <input type="text" placeholder="Enter Username" class="type-username" />
+        <button type="submit">Submit</button>
+      </form>
+      <div class="error">
+        <p class="error-text"></p>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="user-info">
+        <div class="user-image">
+          <p class="click">"Click the image"</p>
+          <a href="#" class="user-link">
+            <img src="#" alt="" class="user-img"/>
+          </a>
+        </div>
+        <div>
+          <h4 class="text-username"></h4>
+        </div>
+      </div>
+      <div class="repository-details"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
